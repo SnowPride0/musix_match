@@ -40,12 +40,12 @@ class _LoginScreenState extends State<LoginScreen> {
                   top: BorderSide(
                     color: utilities.mainColor,
                     style: BorderStyle.solid,
-                    width: 8,
+                    width: 10,
                   ),
                   bottom: BorderSide(
                     color: utilities.mainColor,
                     style: BorderStyle.solid,
-                    width: 8,
+                    width: 10,
                   ),
                 ),
                 gradient: LinearGradient(
