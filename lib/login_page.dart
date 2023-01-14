@@ -32,26 +32,22 @@ class _LoginScreenState extends State<LoginScreen> {
           Image.asset('assets/images/Logo.png', scale: 3.5),
           Padding(padding: EdgeInsets.only(bottom: 24)),
 
-          ClipRRect(
-            borderRadius: BorderRadius.all(Radius.circular(10)),
+          Container(
+            //Padding(padding: EdgeInsets.only(bottom: 24)),
+
+            decoration: BoxDecoration(
+              color: utilities.mainColor,
+              borderRadius: BorderRadius.all(Radius.circular(10)),
+            ),
             child: Container(
               decoration: BoxDecoration(
-                border: Border(
-                  top: BorderSide(
-                    color: utilities.mainColor,
-                    style: BorderStyle.solid,
-                    width: 10,
-                  ),
-                  bottom: BorderSide(
-                    color: utilities.mainColor,
-                    style: BorderStyle.solid,
-                    width: 10,
-                  ),
-                ),
                 gradient: LinearGradient(
-                    colors: [utilities.lightBlue, utilities.purple],
-                    transform: GradientRotation(140)),
+                  colors: [utilities.lightBlue, utilities.purple],
+                  transform: GradientRotation(140),
+                ),
+                borderRadius: BorderRadius.all(Radius.circular(10)),
               ),
+
               //margin: const EdgeInsets.only(left: 20.0, right: 20.0, top: 20),
               padding: const EdgeInsets.only(
                 left: 20,
