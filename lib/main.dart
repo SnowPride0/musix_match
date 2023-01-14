@@ -1,41 +1,23 @@
+import 'package:MusixMatch/login_page.dart';
 import 'package:flutter/material.dart';
+import 'package:MusixMatch/utilities.dart' as utilities;
 
-void main() => runApp(MyApp());
+//DA FARE: CAMBIA APPLICATION ID
 
-class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
+void main() {
+  runApp(Main());
+}
+
+class Main extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      // Application name
-      title: 'Flutter Hello World',
-      // Application theme data, you can set the colors for the application as
-      // you want
+      title: 'MusixMatch',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primaryColor: utilities.mainColor,
       ),
-      // A widget which will be started on application startup
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
-    );
-  }
-}
-
-class MyHomePage extends StatelessWidget {
-  final String title;
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        // The title text which will be shown on the action bar
-        title: Text(title),
-      ),
-      body: Center(
-        child: Text(
-          'Hello, World!',
-        ),
-      ),
+      debugShowCheckedModeBanner: false,
+      home: LoginScreen(),
     );
   }
 }
