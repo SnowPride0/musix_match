@@ -33,11 +33,13 @@ class _LoginScreenState extends State<LoginScreen> {
           Padding(padding: EdgeInsets.only(bottom: 24)),
 
           Container(
-            //Padding(padding: EdgeInsets.only(bottom: 24)),
-
+            padding: EdgeInsets.only(
+              top: 8,
+              bottom: 8,
+            ),
             decoration: BoxDecoration(
               color: utilities.mainColor,
-              borderRadius: BorderRadius.all(Radius.circular(10)),
+              borderRadius: BorderRadius.all(Radius.circular(20)),
             ),
             child: Container(
               decoration: BoxDecoration(
@@ -45,14 +47,12 @@ class _LoginScreenState extends State<LoginScreen> {
                   colors: [utilities.lightBlue, utilities.purple],
                   transform: GradientRotation(140),
                 ),
-                borderRadius: BorderRadius.all(Radius.circular(10)),
+                borderRadius: BorderRadius.all(Radius.circular(15)),
               ),
-
-              //margin: const EdgeInsets.only(left: 20.0, right: 20.0, top: 20),
               padding: const EdgeInsets.only(
                 left: 20,
                 right: 20,
-                top: 20,
+                top: 50,
               ),
               child: Column(
                 children: [
@@ -127,7 +127,8 @@ class _LoginScreenState extends State<LoginScreen> {
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
                         primary: utilities.mainColor,
-                        padding: EdgeInsets.only(left: 50, right: 50),
+                        padding: EdgeInsets.only(
+                            top: 15, bottom: 15, left: 50, right: 50),
                         shape: const RoundedRectangleBorder(
                           borderRadius: BorderRadius.all(Radius.circular(30)),
                         ),
