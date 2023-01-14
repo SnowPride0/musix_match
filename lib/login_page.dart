@@ -33,6 +33,7 @@ class _LoginScreenState extends State<LoginScreen> {
           Padding(padding: EdgeInsets.only(bottom: 24)),
 
           Container(
+            // main container
             padding: EdgeInsets.only(
               top: 8,
               bottom: 8,
@@ -43,10 +44,11 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
             child: Container(
               decoration: BoxDecoration(
-                gradient: LinearGradient(
+                /*gradient: LinearGradient(
                   colors: [utilities.lightBlue, utilities.purple],
                   transform: GradientRotation(140),
-                ),
+                ),*/
+                color: utilities.purple,
                 borderRadius: BorderRadius.all(Radius.circular(15)),
               ),
               padding: const EdgeInsets.only(
@@ -70,6 +72,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         borderSide: BorderSide(
                           width: 2,
                         ),
+                        borderRadius: BorderRadius.all(Radius.circular(8)),
                       ),
                       focusedBorder: OutlineInputBorder(
                         // modifica stile bordi quando TextField é selezionato
@@ -102,6 +105,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         borderSide: BorderSide(
                           width: 2,
                         ),
+                        borderRadius: BorderRadius.all(Radius.circular(8)),
                       ),
                       focusedBorder: OutlineInputBorder(
                         // modifica stile bordi quando TextField é selezionato
@@ -120,10 +124,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                   Container(
                     margin: const EdgeInsets.only(
-                      left: 20.0,
-                      right: 20.0,
-                      top: 20,
-                    ),
+                        left: 20.0, right: 20.0, top: 20, bottom: 10),
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
                         primary: utilities.mainColor,
@@ -143,9 +144,6 @@ class _LoginScreenState extends State<LoginScreen> {
                           textAlign: TextAlign.center),
                     ),
                   ),
-                  const SizedBox(
-                    height: 40,
-                  ),
                   Align(
                     alignment: Alignment.bottomCenter,
                     child: Text("New here?",
@@ -156,7 +154,9 @@ class _LoginScreenState extends State<LoginScreen> {
                           letterSpacing: 2,
                         )),
                   ),
-                  const Padding(padding: EdgeInsets.only(bottom: 10)),
+                  const SizedBox(
+                    height: 50,
+                  ),
                 ],
               ),
             ),
@@ -188,3 +188,4 @@ class _LoginScreenState extends State<LoginScreen> {
             ));
   }
 }
+
