@@ -35,7 +35,7 @@ class _LoginScreenState extends State<LoginScreen> {
           Container(
             // main container
             padding: EdgeInsets.only(
-              top: 8,
+              top: 5,
               bottom: 8,
             ),
             decoration: BoxDecoration(
@@ -188,4 +188,3 @@ class _LoginScreenState extends State<LoginScreen> {
             ));
   }
 }
-
