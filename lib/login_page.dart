@@ -1,5 +1,6 @@
 import 'package:MusixMatch/pages_navigator.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/gestures.dart'; // gestione tap testo
 import 'package:MusixMatch/utilities.dart' as utilities;
 
 class LoginScreen extends StatefulWidget {
@@ -41,6 +42,10 @@ class _LoginScreenState extends State<LoginScreen> {
             decoration: BoxDecoration(
               color: utilities.mainColor,
               borderRadius: BorderRadius.all(Radius.circular(20)),
+            ),
+            margin: EdgeInsets.only(
+              right: 30,
+              left: 30,
             ),
             child: Container(
               decoration: BoxDecoration(
@@ -140,19 +145,30 @@ class _LoginScreenState extends State<LoginScreen> {
                       child: const Text('LOGIN',
                           style: TextStyle(
                             fontSize: 20,
+                            fontWeight: FontWeight.bold,
                           ),
                           textAlign: TextAlign.center),
                     ),
                   ),
                   Align(
                     alignment: Alignment.bottomCenter,
-                    child: Text("New here?",
+                    child: RichText(
+                      text: TextSpan(
+                        text: "Don't have an account? ",
                         style: TextStyle(
-                          color: utilities.mainColor,
-                          fontWeight: FontWeight.bold,
-                          decoration: TextDecoration.underline,
-                          letterSpacing: 2,
-                        )),
+                          color: utilities.white,
+                        ),
+                        children: [
+                          TextSpan(
+                            text: "SIGN UP",
+                            style: TextStyle(
+                              color: utilities.white,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
                   ),
                   const SizedBox(
                     height: 50,
