@@ -52,11 +52,10 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
             child: Container(
               decoration: BoxDecoration(
-                /*gradient: LinearGradient(
+                gradient: LinearGradient(
                   colors: [utilities.lightBlue, utilities.purple],
-                  transform: GradientRotation(140),
-                ),*/
-                color: utilities.purple,
+                  transform: GradientRotation(100),
+                ),
                 borderRadius: BorderRadius.all(Radius.circular(15)),
               ),
               padding: const EdgeInsets.only(
