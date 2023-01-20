@@ -1,6 +1,9 @@
 import 'package:MusixMatch/pages_navigator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart'; // gestione tap testo
+//import 'package:flutter/home_page.dart';
+import 'package:MusixMatch/home_page.dart';
+import 'package:MusixMatch/signup_page.dart';
 import 'package:MusixMatch/utilities.dart' as utilities;
 
 class LoginScreen extends StatefulWidget {
@@ -160,12 +163,18 @@ class _LoginScreenState extends State<LoginScreen> {
                         ),
                         children: [
                           TextSpan(
-                            text: "SIGN UP",
-                            style: TextStyle(
-                              color: utilities.white,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
+                              text: "SIGN UP",
+                              style: TextStyle(
+                                color: utilities.white,
+                                fontWeight: FontWeight.bold,
+                              ),
+                              recognizer: TapGestureRecognizer()
+                                ..onTap = () {
+                                  Navigator.push(context,
+                                      MaterialPageRoute(builder: (context) {
+                                    return SignUpScreen();
+                                  }));
+                                }),
                         ],
                       ),
                     ),
