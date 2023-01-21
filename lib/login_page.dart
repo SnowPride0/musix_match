@@ -201,14 +201,23 @@ class _LoginScreenState extends State<LoginScreen> {
     showDialog<String>(
         context: context,
         builder: (BuildContext context) => AlertDialog(
-              title: const Text('Info account'),
-              content: const Text('Hai dimenticato qualcosa!'),
-              actions: <Widget>[
-                TextButton(
-                  onPressed: () => Navigator.pop(context),
-                  child: const Text('OK'),
-                ),
-              ],
-            ));
+            title: const Text(
+              'ATTENZIONE',
+              style: TextStyle(
+                color: utilities.white,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            content: const Text(
+              'Hai dimenticato qualcosa!',
+              style: TextStyle(color: utilities.white),
+            ),
+            actions: <Widget>[
+              TextButton(
+                onPressed: () => Navigator.pop(context),
+                child: const Text('OK'),
+              ),
+            ],
+            backgroundColor: utilities.mainBackgroundColor));
   }
 }
