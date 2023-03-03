@@ -6,6 +6,8 @@ void main() {
   runApp(Main());
 }
 
+// Commento per mantenere il progetto attivo
+
 class Main extends StatelessWidget {
   @override
   Widget build(BuildContext context) {

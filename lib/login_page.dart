@@ -17,7 +17,8 @@ class _LoginScreenState extends State<LoginScreen> {
   // lista che non cambia mai, quindi final
 
   final username = TextEditingController();
-  final password = TextEditingController(); // aggiornare con funzione hash
+  final password =
+      TextEditingController(); // aggiornare con funzione hash per sicurezza
 
   @override
   Widget build(BuildContext context) {
